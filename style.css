@@ -2016,3 +2016,404 @@ body {
 .opacity-80 { opacity: 0.8; }
 /* Прозрачность 80% */
 /* ДЛЯ МАСШТАБИРОВАНИЯ: шкала прозрачности 0-100 с шагом 10 */
+
+
+/* ===================================================================
+   ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ УЛУЧШЕННОЙ МОБИЛЬНОЙ АДАПТАЦИИ
+   Добавлено для оптимизации отображения на мобильных устройствах
+   =================================================================== */
+
+/* Улучшенные базовые стили для мобильных устройств */
+@media (max-width: 768px) {
+  /* Основной контейнер */
+  body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Навигация - вертикальное меню */
+  .navigation {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  /* Главный контейнер */
+  .main-container {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  /* Hero секция */
+  .hero-section {
+    padding: 30px 0;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8em, 6vw, 2.5em);
+    margin-bottom: 15px;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1em, 4vw, 1.2em);
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  /* Профиль карточка */
+  .profile-card {
+    padding: 20px 15px;
+    margin: 20px 0;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-header h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .rank {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 0.85em;
+  }
+
+  /* Статистика - 2 колонки на мобильных */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-item {
+    padding: 12px 8px;
+  }
+
+  .stat-label {
+    font-size: 0.75em;
+    margin-bottom: 4px;
+  }
+
+  .stat-value {
+    font-size: 1.5em;
+  }
+
+  /* Прогресс бар */
+  .progress-section {
+    margin-top: 20px;
+  }
+
+  .progress-label {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+  }
+
+  .progress-bar {
+    height: 10px;
+  }
+
+  /* Навигационные карточки */
+  .navigation-cards {
+    margin: 30px 0;
+  }
+
+  .section-title {
+    font-size: clamp(1.5em, 5vw, 2em);
+    margin-bottom: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .nav-card {
+    padding: 20px 15px;
+    margin: 0;
+  }
+
+  .card-icon {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .card-description {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  /* Popup/Modal */
+  .popup-content {
+    max-width: 90%;
+    width: 90%;
+    padding: 25px 20px;
+    margin: 0 10px;
+  }
+
+  .achievement-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+
+  .popup-content h3 {
+    font-size: 1.3em;
+  }
+
+  .popup-content p {
+    font-size: 0.9em;
+  }
+
+  /* Кнопки */
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn-accent {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Облака - меньше на мобильных */
+  .cloud {
+    font-size: 1.5em;
+    opacity: 0.2;
+  }
+}
+
+/* Улучшения для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5em, 7vw, 2em);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9em, 4vw, 1.1em);
+  }
+
+  /* Статистика - 1 колонка на очень маленьких экранах */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat-item {
+    padding: 10px;
+  }
+
+  .stat-value {
+    font-size: 1.3em;
+  }
+
+  .card-icon {
+    font-size: 2em;
+  }
+
+  .nav-card {
+    padding: 15px 12px;
+  }
+
+  .profile-card {
+    padding: 15px 12px;
+  }
+
+  .navigation {
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .nav-link {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: clamp(1.3em, 5vw, 1.8em);
+    margin-bottom: 15px;
+  }
+
+  .popup-content {
+    padding: 20px 15px;
+  }
+}
+
+/* Улучшения для планшетов (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .hero-title {
+    font-size: 3em;
+  }
+
+  .main-container {
+    padding: 16px;
+  }
+}
+
+/* Улучшения для ландшафтной ориентации мобильных устройств */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    padding: 20px 0;
+  }
+
+  .navigation {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Улучшения для touch-устройств */
+@media (hover: none) and (pointer: coarse) {
+  .nav-link,
+  .nav-card,
+  .btn {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .nav-link:hover,
+  .nav-card:hover,
+  .btn:hover {
+    transform: none;
+  }
+
+  .nav-link:active,
+  .nav-card:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Улучшения доступности для малых экранов */
+@media (max-width: 768px) {
+  body {
+    line-height: 1.6;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  section,
+  .profile-section,
+  .navigation-cards {
+    margin-bottom: 25px;
+  }
+
+  .glass,
+  .nav-card,
+  .profile-card {
+    border-width: 1.5px;
+  }
+}
+
+/* Оптимизация производительности для мобильных */
+@media (max-width: 768px) {
+  .nav-card,
+  .profile-card,
+  .popup-content {
+    will-change: auto;
+  }
+
+  .nav-card:hover,
+  .profile-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @supports not (backdrop-filter: blur(15px)) {
+    .glass,
+    .navigation,
+    .nav-card,
+    .profile-card {
+      backdrop-filter: none;
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+/* Дополнительные утилиты для мобильных */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .mobile-show {
+    display: block !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+}
+
+/* Улучшения для контейнеров с прокруткой на мобильных */
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body,
+  .main-container {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
